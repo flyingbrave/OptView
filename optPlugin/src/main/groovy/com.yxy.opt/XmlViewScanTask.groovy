@@ -50,7 +50,7 @@ class XmlViewScanTask extends DefaultTask {
             mXmlScanViewSet.clear()
 
             //获取 merger.xml 文件
-            Task mergeResourcesTask = variant.mergeResources
+            Task mergeResourcesTask = variant.getMergeResourcesProvider()
             String mergerPath = "${project.buildDir.path}/intermediates/incremental/${mergeResourcesTask.name}/merger.xml"
             File mergerFile = new File(mergerPath)
 

@@ -26,7 +26,7 @@ class PluginTest implements Plugin<Project>{
 
             variants.each{ variant ->
                 //通过变体获取对应的 merge...Resources
-                Task mergeResourcesTask = variant.mergeResources
+                Task mergeResourcesTask = variant.getMergeResourcesProvider()
 
                 //定义自定义 Task 前缀
                 def prefix = variant.name
