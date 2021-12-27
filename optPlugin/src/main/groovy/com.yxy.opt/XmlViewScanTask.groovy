@@ -11,14 +11,10 @@ import java.util.function.Consumer
 import java.util.function.Predicate
 import java.util.stream.Stream
 
-/**
- * 扫描 Xml Task
- */
+
 class XmlViewScanTask extends DefaultTask {
 
-    /**
-     * Xml 布局中被添加进来的 View
-     */
+
     private Set<String> mXmlScanViewSet = new HashSet<>()
 
     private BaseVariant variant
@@ -29,9 +25,7 @@ class XmlViewScanTask extends DefaultTask {
     }
 
 
-    /**
-     * 执行 xml 扫描 Task
-     */
+
     @TaskAction
     void performXmlScanTask() {
         try {
@@ -101,10 +95,7 @@ class XmlViewScanTask extends DefaultTask {
         }
     }
 
-    /**
-     * 过滤黑名单中的 viewName
-     * @return Stream<String>
-     */
+
     private Stream<String> filterXmlScanViewSet() {
         List<String> ignoreViewList = project.ignore.ignoreViewList
         Stream<String> viewNameStream = null
@@ -129,15 +120,7 @@ class XmlViewScanTask extends DefaultTask {
 
 
 
-    /**
-     * 递归解析 merger.xml 中的 Node 节点
-     *
-     * merger.xml 文件中的 布局文件标签如下：
-     * <file name="activity_main"
-     *       path="/Users/zhouying/learning/GradleDemo/app/src/main/res/layout/activity_main.xml"
-     *       qualifiers=""
-     *       type="layout"/>
-     */
+
     private void parseNode(Object obj) {
         if (obj instanceof Node) {
             Node node = obj
@@ -179,9 +162,7 @@ class XmlViewScanTask extends DefaultTask {
     }
 
 
-    /**
-     * 递归解析 layout 布局子节点
-     */
+
     private void parseLayoutNode(Object obj) {
         if (obj instanceof Node) {
             Node node = obj

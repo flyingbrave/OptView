@@ -9,3 +9,6 @@
 rootProject.name = "OptView"
 include ':app'
 include ':optPlugin'
+include ':apt-annotation'
+include ':apt-processor'
+include ':apt-api'
