@@ -1,9 +1,11 @@
 apply plugin: 'groovy'
-
+//添加Android 模块进行改进
+//在build中添加文件时候不多添加没用的
 dependencies {
 
     implementation gradleApi()
     implementation localGroovy()
+    implementation "com.android.tools.build:gradle:4.2.1"
 }
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.flyingbrave'
