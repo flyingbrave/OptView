@@ -1,6 +1,6 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
+//noinspection UnnecessaryQualifiedReference
+apply plugin: 'com.yxy.optview'
 
 android {
     compileSdkVersion 30
@@ -36,4 +36,5 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.flyingbrave:OptView:1.0.0'
 }
