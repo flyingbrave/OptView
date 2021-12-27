@@ -8,4 +8,4 @@
 //}
 rootProject.name = "OptView"
 include ':app'
-include ':OptViewPlugin'
+include ':optPlugin'
