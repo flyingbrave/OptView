@@ -7,7 +7,7 @@
 该项目主要是结合Gradle练习APT处理器.增强自己对其掌握的熟练程度。
 项目参考：
         
-         https://github.com/hongyangAndroid/ViewOptDemo，
+       
 
          https://github.com/sweetying520/AptDemo，
           
